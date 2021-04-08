@@ -15,9 +15,9 @@ const ProductScreen = ({ match }) => {
     };
 
     fetchProduct();
-  }, []);
+  }, [match]);
   return (
-    <>  
+    <>
       <Link className="btn btn-light my-3" to="/">
         Go Back
       </Link>
@@ -33,7 +33,7 @@ const ProductScreen = ({ match }) => {
             <ListGroup.Item>
               <Rating
                 value={product.rating}
-                text={`${product.numreviews} reviews`}
+                text={`${product.numReviews} reviews`}
               />
             </ListGroup.Item>
             <ListGroup.Item>Price : ${product.price}</ListGroup.Item>
